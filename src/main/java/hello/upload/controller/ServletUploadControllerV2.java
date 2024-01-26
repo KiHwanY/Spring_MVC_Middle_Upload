@@ -67,4 +67,9 @@ public class ServletUploadControllerV2 {
 
         return "upload-form";
     }
+//    application.properties 에서 설정한 file.dir 의 값을 주입한다.
+    
+//    멀티파트 형식은 전송 데이터를 하나하나 각각 부분( Part )으로 나누어 전송한다. parts 에는 이렇게
+//    나누어진 데이터가 각각 담긴다.
+//    서블릿이 제공하는 Part 는 멀티파트 형식을 편리하게 읽을 수 있는 다양한 메서드를 제공한다
 }

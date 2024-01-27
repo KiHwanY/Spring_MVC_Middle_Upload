@@ -12,11 +12,31 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-
+// 스프링은 MultipartFile이라는 인터페이스로 멀티파트 파일을 매우 편리하게 지원한다.
 @Slf4j
 @Controller
 @RequestMapping("/spring")
 public class SpringUploadController {
+//    코드를 보면 스프링 답게 딱 필요한 부분의 코드만 작성하면 된다.
+
+    /*
+    *   @RequestParam MultipartFile file
+    *   업로드하는 HTML Form의 name에 맞추어 @RequestParam을 적용하면 된다.
+    *   추가로 @ModelAttribute에서도 MultipartFile을 동일하게 사용할 수 있다.
+    *
+    *   [ MultipartFile 주요 메서드 ]
+    *   file.getOriginalFilename() : 업로드 파일 명
+    *   file. transferTo(...) : 파일 저장
+    *
+    *   [실행 로그]
+    *
+    *   request=org.springframework.web.multipart.support.StandardMultipartHttpServletR
+        equest@5c022dc6
+        itemName=상품A
+        multipartFile=org.springframework.web.multipart.support.StandardMultipartHttpSe
+        rvletRequest$StandardMultipartFile@274ba730
+        파일 저장 fullPath=/Users/kimyounghan/study/file/스크린샷.png
+    * */
 
     @Value("${file.dir}")
     private String fileDir;

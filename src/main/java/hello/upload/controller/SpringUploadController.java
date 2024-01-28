@@ -17,6 +17,7 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/spring")
 public class SpringUploadController {
+
 //    코드를 보면 스프링 답게 딱 필요한 부분의 코드만 작성하면 된다.
 
     /*
@@ -59,7 +60,6 @@ public class SpringUploadController {
             log.info("파일 저장 fullPath={}", fullPath);
             file.transferTo(new File(fullPath));
         }
-
         return "upload-form";
     }
 }

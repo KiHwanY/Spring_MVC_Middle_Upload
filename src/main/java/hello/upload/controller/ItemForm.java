@@ -13,3 +13,10 @@ public class ItemForm {
     private MultipartFile attachFile;
     private List<MultipartFile> imageFiles;
 }
+/*
+*   상품 저장용 폼이다.
+*
+*   List<MultipartFile> imageFiles : 이미지를 다중 업로드 하기 위해 MultipartFile를 사용했다.
+*   MultipartFile attachFile : 멀티파트는 @ModelAttribute에서 사용할 수 있다.
+*
+* */

@@ -27,6 +27,22 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class ItemController {
+    /*
+    *   @GetMapping("/items/new") : 등록 폼을 보여준다.
+        @PostMapping("/items/new") : 폼의 데이터를 저장하고 보여주는 화면으로 리다이렉트 한다.
+        @GetMapping("/items/{id}") : 상품을 보여준다.
+
+        @GetMapping("/images/{filename}") : <img> 태그로 이미지를 조회할 때 사용한다. UrlResource
+        로 이미지 파일을 읽어서 @ResponseBody 로 이미지 바이너리를 반환한다.
+
+        @GetMapping("/attach/{itemId}") : 파일을 다운로드 할 때 실행한다. 예제를 더 단순화 할 수 있지만,
+        파일 다운로드 시 권한 체크같은 복잡한 상황까지 가정한다 생각하고 이미지 id 를 요청하도록 했다. 파일
+        다운로드시에는 고객이 업로드한 파일 이름으로 다운로드 하는게 좋다. 이때는 Content-Disposition
+        해더에 attachment; filename="업로드 파일명" 값을 주면 된다.
+    *
+    *
+    * */
+
 
     private final ItemRepository itemRepository;
     private final FileStore fileStore;
